@@ -1,1 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
+
+
+/* :root {
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 2px solid; 
+}  */
+
+
+:root {
+  background-color: #F6F5F2;
+}  
+
+@keyframes glow {
+  0% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+  50% { box-shadow: 0 0 20px rgba(255, 255, 255, 1); }
+  100% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+}
+
+
+
+@theme {
+  --font-jetbrains: 'JetBrains Mono', monospace;
+  --font-poppins: 'Poppins', sans-serif;
+  --breakpoint-mdPlus: 800px;
+  --breakpoint-custom: 1200px;
+}
+
+
+@layer utilities {
+  @keyframes fade-in-out {
+    0%, 100% {
+      opacity: 0;
+    }
+    10%, 90% {
+      opacity: 1;
+    }
+  }
+
+  .animate-fade-in-out {
+    animation: fade-in-out 1.5s ease-in-out;
+  }
+}

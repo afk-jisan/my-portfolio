@@ -1,13 +1,19 @@
+import Socials from "./Socials.jsx";
 export default function About() {
     return (
-      <div className="min-h-screen bg-white px-6 py-12 md:py-16 lg:py-20">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">About Me</h1>
-          <p className="text-gray-600 mb-8 text-lg">
-            I'm <span className="font-semibold text-blue-600">Baktier Galib Jisan</span>, a passionate front-end developer and CSE student at BRAC University. I love building clean, user-focused web interfaces with modern technologies.
-          </p>
+      <div className="min-h-[calc(100vh-69px)] mx-auto px-6 py-12 md:py-16 lg:py-10">
+        <div className="xl:w-[1280px] mx-auto text-center">
+          <div className="grid grid-cols-2 items-center ">
+            <div className="px-10">
+              <p className="text-gray-600 mb-8 text-lg text-[24px] text-start">I'm <span className="font-semibold text-blue-600">Baktier Galib Jisan,</span><br/> a passionate front-end developer and CSE student at BRAC University. I love building clean, user-focused web interfaces with modern technologies.</p>
+              <Socials />
+            </div>
+            
+            <img src="./pfp.png" alt="profile picture" className="pointer-events-none justify-self-end animate-[glow_2s_infinite] w-[320px] h-[320px] object-cover rounded-full shadow-xl border-4 border-white hover:scale-105 transition duration-300 ease-in-out"></img>
+          </div>
+          
   
-          <div className="text-left space-y-6">
+          <div className="text-left space-y-6 mx-10">
             <section>
               <h2 className="text-xl font-semibold text-gray-800 mb-2">👨‍💻 What I Do</h2>
               <p className="text-gray-600">

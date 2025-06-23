@@ -1,12 +1,12 @@
-export default function Contact() {
+export default function Form() {
     return (
-      <div className="min-h-screen bg-white px-6 py-12 md:py-16 lg:py-20">
+      <div className="h-fit py-5 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 text-center">
             Get in Touch
           </h2>
           <p className="text-gray-500 text-center mb-10">
-            Fill out the form below and we’ll get back to you within 24 hours.
+            Fill out the form below and I will get back to you within 24 hours.
           </p>
   
           <form className="space-y-6 bg-white shadow-md p-8 rounded-xl">
