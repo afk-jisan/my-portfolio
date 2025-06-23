@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const CopyEmailButton = () => {
   const [copied, setCopied] = useState(false);
-  const email = "example@email.com";
+  const email = "baktier.galib.jisan@gmail.com";
 
   const handleCopy = () => {
     navigator.clipboard.writeText(email);
@@ -17,7 +17,7 @@ const CopyEmailButton = () => {
     >
       Copy Email
       {copied && (
-        <span className="absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded animate-fade-in-out">
+        <span className="absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-[#69070a] text-white text-xs px-2 py-1 rounded animate-fade-in-out">
           Copied!
         </span>
       )}
