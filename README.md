@@ -1,12 +1,124 @@
-# React + Vite
+# 💼 Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal portfolio website built with **React**, **Tailwind CSS**, and **Supabase**. It showcases my skills, projects, and experience as a developer, and serves as a central place for anyone interested in learning more about me or getting in touch.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔧 Tech Stack
 
-## Expanding the ESLint configuration
+* ⚛️ **React 19**
+* 🎨 **Tailwind CSS 4**
+* 🎞️ **Framer Motion** – smooth animations
+* 🔁 **React Router DOM** – for multi-page routing
+* 🔽 **React Scroll** – smooth section scrolling
+* 🎨 **React Icons** – easily used SVG icons
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📁 Project Structure
+
+```
+mine/
+|   .gitignore
+|   eslint.config.js
+|   index.html
+|   package-lock.json
+|   package.json
+|   README.md
+|   structure.txt
+|   vite.config.js
+|   
++---public
+|   ...
+|       
+\---src
+    |   App.jsx
+    |   index.css
+    |   main.jsx
+    |   
+    +---assets
+    |       react.svg
+    |       
+    +---Components
+    |   |   About.jsx
+    |   |   BlurText.jsx
+    |   |   Card.jsx
+    |   |   CopyEmail.jsx
+    |   |   Footer.jsx
+    |   |   Form.jsx
+    |   |   hero.jsx
+    |   |   Navbar.jsx
+    |   |   Socials.jsx
+    |   |   Tab.jsx
+    |   |   
+    |   \---Projects
+    |           data.js
+    |           Projects.jsx
+    |           
+    +---hooks
+    |       useBreakpoint.js
+    |       
+    +---Pages
+    |       contact.jsx
+    |       Home.jsx
+    |       
+    \---router
+            routes.jsx
+
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/afk-jisan/my-portfolio.git
+cd my-portfolio
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the development server
+
+```bash
+npm run dev
+```
+
+
+
+
+
+
+
+
+
+---
+
+## ✨ Features
+
+* Smooth scroll-based animations using Framer Motion
+* Responsive design across all devices
+* Clean and modern UI with Tailwind CSS
+* Scroll navigation and route-based page structure
+* Modular component structure for easy scalability
+
+---
+
+## 📬 Contact
+
+If you like this project or want to get in touch:
+
+* 📧 [baktier.galib.jisan@gmail.com](mailto:baktier.galib.jisan@gmail.com)
+* 🌐 [yourwebsite.com]()
+
+---
+
+## 📄 License
+
+This project is **private** and is not licensed for public/commercial reuse.
