@@ -1,15 +1,17 @@
 import Socials from "./Socials.jsx";
 export default function About() {
     return (
-      <div className="min-h-[calc(100vh-69px)] mx-auto px-6 py-12 md:py-16 lg:py-10">
-        <div className="xl:w-[1280px] mx-auto text-center">
-          <div className="grid grid-cols-2 items-center ">
+      <div className="min-h-[calc(100vh-69px)] mx-auto px-6 py-12 md:py-16 lg:py-10 ">
+        <div className="xl:w-[1280px] mx-auto text-center ">
+          <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center ">
             <div className="px-10">
               <p className="text-gray-600 mb-8 text-lg text-[24px] text-start">I'm <span className="font-semibold text-blue-600">Baktier Galib Jisan,</span><br/> a passionate front-end developer and CSE student at BRAC University. I love building clean, user-focused web interfaces with modern technologies.</p>
               <Socials />
             </div>
+            <div className="w-full flex justify-center md:justify-end pr-0 md:pr-15 my-5">
+              <img src="./pfp.png" alt="profile picture" className=" pointer-events-none justify-self-end animate-[glow_2s_infinite] w-[320px] h-[320px] object-cover rounded-full shadow-xl border-4 border-white hover:scale-105 transition duration-300 ease-in-out"></img>
+            </div>
             
-            <img src="./pfp.png" alt="profile picture" className="pointer-events-none justify-self-end animate-[glow_2s_infinite] w-[320px] h-[320px] object-cover rounded-full shadow-xl border-4 border-white hover:scale-105 transition duration-300 ease-in-out"></img>
           </div>
           
   

@@ -13,7 +13,7 @@ export default function Project() {
 
   return (
     <div id="projects" className=" flex flex-col justify-between items-center custom:w-[1200px] mx-auto">
-      <p className="text-[32px] font-bold text-center sticky top-20">Few of the projects I have worked on -</p>
+      <p className="text-[32px] font-bold text-center mt-20">Few of the projects I have worked on -</p>
       <div ref={container} className=" ">
         {
           projectsData.map( (project, i) => {

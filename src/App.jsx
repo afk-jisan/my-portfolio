@@ -18,7 +18,6 @@ export default function App() {
   );
 }
 
-
 //flex flex-col bg-[#e5e7eb] h-screen
 
 //fixed top-0 left-0 w-full z-50
