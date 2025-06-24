@@ -7,7 +7,7 @@ export default function Home() {
     return (
       <div className="">
       <Hero/>
-      <Project/>
+      <Project limit={3}/>
       <Contact />
       <Footer />
       </div>

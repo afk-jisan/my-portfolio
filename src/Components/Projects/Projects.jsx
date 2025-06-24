@@ -1,15 +1,32 @@
-import { projectsData } from "./data";
+// import { projectsData } from "./data";
 import Card from "../Card";
 import { motion, useScroll } from "framer-motion"
-import { useRef } from "react";
+import { useState, useEffect, useRef } from "react";
+import { supabase } from "../../lib/supabaseClient";
 
-
-export default function Project() {
+export default function Project({ limit }) {
  const container = useRef(null);
  const { scrollYProgress } = useScroll({
   target: container,
   offset: ['start start', 'end end']
  })
+  const [projectsData, setProjectsData] = useState([]);
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const { data, error } = await supabase
+        .from("projects")
+        .select("*")
+        .order("id", { ascending: true });
+      
+      if (error) console.log("Fetch error:", error);
+      else setProjectsData(data);
+      // console.log(data);
+    };
+    fetchProjects();
+  }, []);
+
+  // Determine how much data to map over based on the 'limit' prop
+  const dataToMap = limit ? projectsData.slice(0, limit) : projectsData;
 
   return (
     <div id="projects" className="bg-[#bca9bc2a] custom:w-full">
@@ -18,7 +35,7 @@ export default function Project() {
       
       <div ref={container} className=" ">
         {
-          projectsData.map( (project, i) => {
+          dataToMap.map( (project, i) => {
             const targetScale = 1 - ((projectsData.length - i) * 0.05);
             return <Card key={i} i={i} {...project} progress={scrollYProgress} range={[i * 0.25, 1]} targetScale={targetScale}/>
           })

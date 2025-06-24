@@ -18,9 +18,9 @@ export default function Card( { title, description, src, link, color, i, progres
             <motion.div style={{scale, backgroundColor: color, top: `calc(-10% + ${i * 35}px)`, width: isMd ? '75%' : '98%' }} className= "h-[670px] sm:h-[466px] relative  rounded-[25px] sm:rounded-[35px] ">
                 <div className="flex flex-col sm:flex-row justify-center items-center">
                     <div className="sm:w-[50%] h-[350px] sm:h-[466px] p-10 ">
-                        <div className=" rounded-[16px] relative overflow-hidden w-full h-full ">
+                        <div className=" rounded-[16px] relative overflow-hidden w-full h-full border-2 border-gray-600">
                             <motion.div style={{scale: imageScale}} className="w-full ">
-                                <img className="h-[466px] w-full object-fill" src={src}></img>
+                                <img className="h-[466px] w-full " src={src}></img>
                             </motion.div>                    
                         </div>
                     </div>
