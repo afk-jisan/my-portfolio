@@ -47,10 +47,10 @@ export default function Form() {
     return (
       <div className="h-fit py-5 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--nav-text)] mb-4 text-center">
             Get in Touch
           </h2>
-          <p className="text-gray-500 text-center mb-10">
+          <p className="text-gray-500 dark:text-[var(--color-text)] text-center mb-10">
             Fill out the form below and I will get back to you within 24 hours.
           </p>
   

@@ -25,9 +25,9 @@ export default function Hero () {
             </div>
 
             <Link to="projects" duration={1200} smooth={true}
-              className="relative left-0 mdPlus:left-10 mb-5 mdPlus:mb-0 overflow-hidden inline-block group font-semibold border-2 px-8 py-3 rounded-[16px] border-[#253547] text-[#253547] hover:text-[#f0e6e7]">
-              <span className="absolute inset-0 bg-[#69070a] scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-500 ease-out z-0 rounded-[14px]"></span>
-              <span className="relative z-10">See my projects</span>
+              className="relative left-0 mdPlus:left-10 mb-5 mdPlus:mb-0 overflow-hidden inline-block group font-semibold border-2 px-8 py-3 rounded-[16px] border-[#253547] text-[#253547] dark:text-[var(--color-text)] hover:text-[#f0e6e7] hover:dark:text-black">
+              <span className="absolute inset-0 bg-[#69070a] dark:bg-[var(--color-text)] scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-500 ease-out z-0 rounded-[14px]"></span>
+              <span className="relative z-10 hover:dark:text-black">See my projects</span>
             </Link>
           </div>
           <div className="w-[80%]">
@@ -42,9 +42,9 @@ export default function Hero () {
           <p className="text-center text-[20px] mb-3">I'm here to bring your ideas to life whether you need a cutting-edge website, strategic design solutions, or technical expertise</p>
           
           <Link to="contact" duration={2000} smooth={true}
-              className="relative left-0 mdPlus:left-10 mb-5 mdPlus:mb-0 overflow-hidden inline-block group font-semibold border-2 px-8 py-3 rounded-[16px] border-[#253547] text-[#253547] hover:text-[#f0e6e7]">
-            <span className="absolute inset-0 bg-[#69070a] scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-500 ease-out z-0 rounded-[14px]"></span>
-            <span className="relative z-10">Contact Me</span>
+              className="relative left-0 mdPlus:left-10 mb-5 mdPlus:mb-0 overflow-hidden inline-block group font-semibold border-2 px-8 py-3 rounded-[16px] border-[#253547] text-[#253547] dark:text-[var(--color-text)] hover:text-[#f0e6e7] hover:dark:text-black">
+            <span className="absolute inset-0 bg-[#69070a] dark:bg-[var(--color-text)] scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-500 ease-out z-0 rounded-[14px] "></span>
+            <span className="relative z-10 hover:dark:text-black">Contact Me</span>
           </Link>
         </div>       
       </div>

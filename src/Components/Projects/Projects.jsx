@@ -13,8 +13,9 @@ export default function Project() {
 
   return (
     <div id="projects" className="bg-[#bca9bc2a] custom:w-full">
+      <p className="text-[32px] font-bold text-center pt-20 sm:mb-0 mb-30">Few of the projects I have worked on -</p>
     <div className="flex flex-col justify-between items-center custom:w-[1200px] mx-auto">
-      <p className="text-[32px] font-bold text-center mt-20">Few of the projects I have worked on -</p>
+      
       <div ref={container} className=" ">
         {
           projectsData.map( (project, i) => {
