@@ -9,7 +9,7 @@ export default function Hero () {
     return(
         <div className="min-h-[calc(100vh-69px)] xl:w-[1280px] mx-auto flex flex-col pt-20 items-center">
         
-        <div className="flex flex-col mdPlus:flex-row justify-center items-center pb-15 ml-10">
+        <div className="flex flex-col mdPlus:flex-row justify-center items-center pb-15 sm:ml-10">
           <div className="flex flex-col justify-around mdPlus:items-start items-center gap-5" >
             <div className="flex flex-col gap-1 px-10">
               <h1 className="text-[32px] font-bold font-jetbrains">Hi, I'm Baktier. 👋🏼</h1>

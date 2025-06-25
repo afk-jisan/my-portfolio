@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export default function App() {
   const tabs = [
-    { id: 'world', label: 'Frontend', content: 'React, TailwindCSS, NextJS, responsive UI/UX', gradient: 'from-blue-400/30 to-blue-600/30' },
-    { id: 'us', label: 'Backend', content: ' FastAPI, PostgreSQL', gradient: 'from-red-400/30 to-red-600/30' },
+    { id: 'world', label: 'Frontend', content: 'React, TailwindCSS, Framer-motion, NextJS, TypeScript', gradient: 'from-blue-400/30 to-blue-600/30' },
+    { id: 'us', label: 'Backend', content: ' FastAPI, PostgreSQL, Supabase', gradient: 'from-red-400/30 to-red-600/30' },
     { id: 'technology', label: 'AI', content: 'Early learning stage', gradient: 'from-green-400/30 to-green-600/30' },
     { id: 'culture', label: 'Other skills', content: 'Git, Python, javascript', gradient: 'from-indigo-400/30 to-indigo-600/30' },
   ];
@@ -54,9 +54,9 @@ export default function App() {
   const contentTransitionDuration = isSkippingTabs ? 0.2 : Math.max(0.2, 0.4 - 0.05 * Math.abs(activeTabIndex - prevTabIndex));
 
   return (
-    <div className="h-fit bg-[#69070aab] flex items-center justify-center rounded-2xl ">
+    <div className="h-fit w-[85vw] xsm:w-full bg-[#69070aab] flex items-center justify-center rounded-2xl ">
       <div className="w-full max-w-4xl bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl p-6 md:p-8">
-        <h1 className="text-4xl md:text-4xl font-bold font-jetbrains text-center bg-gradient-to-r from-[#ACBB78] to-[#F7F8F8] bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-4xl mb-2 font-bold font-jetbrains text-center bg-gradient-to-r from-[#ACBB78] to-[#F7F8F8] bg-clip-text text-transparent">
           Skills
         </h1>
 

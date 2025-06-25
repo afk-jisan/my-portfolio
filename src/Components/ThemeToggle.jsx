@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import { motion, AnimatePresence } from "framer-motion";
 const DarkModeToggle = () => {
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem("theme") === "dark";

@@ -1,14 +1,52 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import  DarkModeToggle from './ThemeToggle';
+import { motion } from "framer-motion";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  
 
   return (
     <nav className="flex flex-row items-center justify-around xl:w-[1280px] px-2 smc:px-8 xl:px-0 mx-auto ">
-      <div className="h-[40px] w-[40px] xl:ml-20 cursor-pointer">
-        <img src="batman-emotions-hero-superhero-svgrepo-com.svg" className="dark:invert" alt="" ></img>
+      {/* Light mode image */}
+      <div className="h-[40px] w-[40px] xl:ml-20 cursor-pointer block dark:hidden">
+        <motion.img
+        src="./batman-emotions-hero-superhero-svgrepo-com.svg"
+        className="dark:invert"
+        alt="Batman"
+        animate={{ y: [0, -10, 0] }}
+        transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+        whileHover={{rotate: [0, -5, 5, -5, 0]}}
+      />
       </div>
+      {/* Dark mode image */}
+      <motion.img
+      src="/batman-svgrepo-com.svg"
+      alt="Batman Logo"
+      className="hidden dark:block h-[48px] w-[48px] xl:ml-20 cursor-pointer invert drop-shadow-xl"
+      initial={{
+        y: -100,
+        rotate: -180,
+        opacity: 0,
+        scale: 0.8,
+      }}
+      animate={{
+        y: 0,
+        rotate: 360,
+        opacity: 1,
+        scale: 1,
+      }}
+      transition={{
+        duration: 1.2,
+        ease: [0.22, 1, 0.36, 1], // easeOutBack
+      }}
+      whileHover={{
+        scale: 1.1,
+        rotate: 10,
+        transition: { type: "spring", stiffness: 200 },
+      }}
+    />
+
       {/* Desktop Menu */}
       <div className=" flex text-[22px] border-2 rounded-full mx-auto  overflow-hidden">
         <NavLink

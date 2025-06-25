@@ -2,38 +2,38 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 import useBreakpoint from "../hooks/useBreakpoint";
 
-export default function Card( { title, description, src, link, color, i, progress, range, targetScale} ) {
+export default function Card( { title, description, src, tech, src_link, live_link,  color, i, progress, range, targetScale} ) {
     const container = useRef(null);
     const {scrollYProgress} = useScroll({
         target: container,
         offset: ['start end', 'start start']
     })
-
+   
     const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1])
     const scale = useTransform(progress, range, [1, targetScale])
     const { isMd } = useBreakpoint();
 
     return (
-        <div ref={container} className="h-[100vh] flex justify-center items-center sticky top-0 xl:w-[1280px]">
-            <motion.div style={{scale, backgroundColor: color, top: `calc(-10% + ${i * 35}px)`, width: isMd ? '75%' : '98%' }} className= "h-[670px] sm:h-[466px] relative  rounded-[25px] sm:rounded-[35px] ">
+        <div ref={container} className="h-[100vh] flex justify-center items-center  sticky top-0 xl:w-[1280px] dark:text-[var(--color-bg)]">
+            <motion.div style={{scale, backgroundColor: color, top: `calc(-10% + ${i * 35}px)`, width: isMd ? '75%' : '98%' }} className= "h-[800px] sm:h-[466px] relative  rounded-[25px] sm:rounded-[35px] ">
                 <div className="flex flex-col sm:flex-row justify-center items-center">
                     <div className="sm:w-[50%] h-[350px] sm:h-[466px] p-10 ">
                         <div className=" rounded-[16px] relative overflow-hidden w-full h-full border-2 border-gray-600">
                             <motion.div style={{scale: imageScale}} className="w-full ">
-                                <img className="h-[466px] w-full " src={src}></img>
+                                <img className="h-[466px] w-full object-cover" src={src}></img>
                             </motion.div>                    
                         </div>
                     </div>
                     <div className="flex flex-col justify-center items-start flex-1/2 p-11 pt-0 sm:p-5">
                         <p className="text-[30px] font-pattaya font-normal">{title}</p>
                         <p className="text-[18px]">{description}</p>
-                        <p className="text-[18px] mt-2">Tech used: React & TailwindCSS</p>
+                        <p className="text-[18px] mt-2">Tech used: {tech}</p>
                         <div className="flex flex-row gap-2 pt-5">
-                          <button className="border-3 border-dashed border-gray-300 w-[80px] rounded-[14px] text-white py-2 px-4 hover:bg-[#8a0a0f] transition">
-                            Source
+                          <button className="border-3 border-dashed border-gray-300 w-[80px] rounded-[14px] cursor-pointer py-2 px-4 hover:bg-[#8a0a0f] transition">
+                            <a href={src_link} target="_blank" rel="noopener noreferrer">Source</a>
                           </button>
-                          <button className="border-3 border-dashed border-gray-300 w-[80px] rounded-[14px] text-white py-2 px-4 hover:bg-[#8a0a0f] transition">
-                            Live
+                          <button className="border-3 border-dashed border-gray-300 w-[80px] rounded-[14px] cursor-pointer py-2 px-4 hover:bg-[#8a0a0f] transition">
+                            <a href={live_link} target="_blank" rel="noopener noreferrer">Live</a>
                           </button>
                         </div>
                         
