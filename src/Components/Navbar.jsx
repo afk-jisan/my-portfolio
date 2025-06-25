@@ -2,6 +2,10 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import  DarkModeToggle from './ThemeToggle';
 import { motion } from "framer-motion";
+import ProjectsIcon from "./icons/ProjectsIcon";
+import ContactIcon from "./icons/ContactIcon";
+import LaptopIcon from "./icons/LaptopIcon";
+import HomeIcon from "./icons/HomeIcon";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   
@@ -62,11 +66,12 @@ export default function Navbar() {
           </div>
 
           {/* Icon for screen < 650px */}
-          <img
+          {/* <img
             src="home-svgrepo-com.svg"
             alt="Home"
             className="smc:hidden h-[40px] w-[40px] relative z-10"
-          />
+          /> */}
+          <HomeIcon className="smc:hidden h-[40px] text-black  dark:text-[#a9aaaf] w-[40px]"/>
         </NavLink>
 
         <div className="w-[1px] bg-gray-400" />
@@ -82,11 +87,12 @@ export default function Navbar() {
             <span className="relative z-10">About</span>
           </div>
           {/* Icon for screen < 650px */}
-          <img
+          {/* <img
             src="laptop-minimalistic-svgrepo-com.svg"
             alt="about"
             className="smc:hidden h-[40px] w-[40px] relative z-10"
-          />
+          /> */}
+          <LaptopIcon className="smc:hidden h-[40px] text-black  dark:text-[#a9aaaf] w-[40px]"/>
         </NavLink>
 
         <div className="w-[1px] bg-gray-400" />
@@ -101,11 +107,13 @@ export default function Navbar() {
             <span className="absolute inset-0 bg-[#69070a] scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-500 ease-out z-0 "></span>
             <span className="relative z-10">Contact</span>
           </div>
-          <img
+          {/* <img
             src="contact-svgrepo-com.svg"
             alt="contact"
-            className="smc:hidden h-[40px] w-[40px] relative z-10"
-          />
+            className="smc:hidden h-[40px] dark:invert w-[40px] relative z-10"
+          /> */}
+
+          <ContactIcon className="smc:hidden h-[40px] text-black dark:text-[#a9aaaf] w-[40px]"/>
         </NavLink>
 
         <div className="w-[1px] bg-gray-400" />
@@ -120,11 +128,12 @@ export default function Navbar() {
             <span className="absolute inset-0 bg-[#69070a] scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-500 ease-out z-0 "></span>
             <span className="relative z-10">Projects</span>
           </div>
-          <img
+          {/* <img
             src="projects-svgrepo-com.svg"
             alt="project"
-            className="smc:hidden h-[40px] w-[40px] relative z-10"
-          />
+            className="smc:hidden h-[40px] dark:text-blue-400 w-[40px] relative z-10"
+          /> */}
+          <ProjectsIcon className="smc:hidden h-[40px] text-black dark:text-[#a9aaaf] w-[40px]"/>
         </NavLink>
       </div>
 
