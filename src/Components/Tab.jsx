@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 export default function App() {
   const tabs = [
     { id: 'world', label: 'Frontend', content: 'React, TailwindCSS, Framer-motion, NextJS, TypeScript', gradient: 'from-blue-400/30 to-blue-600/30' },
-    { id: 'us', label: 'Backend', content: ' FastAPI, PostgreSQL, Supabase', gradient: 'from-red-400/30 to-red-600/30' },
+    { id: 'us', label: 'Backend', content: 'Go, FastAPI, PostgreSQL, Supabase', gradient: 'from-red-400/30 to-red-600/30' },
     { id: 'technology', label: 'AI', content: 'Early learning stage', gradient: 'from-green-400/30 to-green-600/30' },
     { id: 'culture', label: 'Other skills', content: 'Git, Python, javascript', gradient: 'from-indigo-400/30 to-indigo-600/30' },
   ];

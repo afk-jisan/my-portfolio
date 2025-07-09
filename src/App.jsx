@@ -1,10 +1,31 @@
 import { NavLink, Outlet } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
+import Lenis from "@studio-freight/lenis";
+import { useEffect, useRef } from 'react'
+
 
 export default function App() {
+  useEffect(() => {
+  const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => t * (2 - t),
+  smooth: true,
+  lerp: 0.075,
+});
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+}, []);
+
   return (
+    
     <div className="min-h-screen flex flex-col mx-auto">
+      
       {/* Fixed navbar on top */}
       <div className="fixed top-0 left-0 w-full z-50  shadow-md py-2 bg-[var(--nav-bg)] text-[var(--nav-text)] h-[69px]">
         <Navbar />
