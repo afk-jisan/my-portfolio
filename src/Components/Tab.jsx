@@ -54,7 +54,7 @@ export default function App() {
   const contentTransitionDuration = isSkippingTabs ? 0.2 : Math.max(0.2, 0.4 - 0.05 * Math.abs(activeTabIndex - prevTabIndex));
 
   return (
-    <div className="h-fit w-[85vw] xsm:w-full bg-[#69070aab] flex items-center justify-center rounded-2xl ">
+    <div className="h-fit w-[85vw] xsm:w-full bg-[#69070aab] flex items-center justify-center rounded-2xl mt-16 mdPlus:mt-0">
       <div className="w-full max-w-4xl  border border-white/20 rounded-2xl shadow-2xl p-6 md:p-8">
         <h1 className="text-4xl md:text-4xl mb-2 font-bold font-jetbrains text-center bg-gradient-to-r from-[#ACBB78] to-[#F7F8F8] bg-clip-text text-transparent">
           Skills

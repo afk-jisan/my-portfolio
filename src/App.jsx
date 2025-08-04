@@ -7,12 +7,12 @@ import { useEffect, useRef } from 'react'
 
 export default function App() {
   useEffect(() => {
-  const lenis = new Lenis({
-  duration: 1.2,
-  easing: (t) => t * (2 - t),
-  smooth: true,
-  lerp: 0.075,
-});
+    const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => t * (2 - t),
+    smooth: true,
+    lerp: 0.075,
+  });
 
   function raf(time) {
     lenis.raf(time);
@@ -20,7 +20,13 @@ export default function App() {
   }
 
   requestAnimationFrame(raf);
-}, []);
+  }, []);
+
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/pfp.png"; // preload in background
+  }, []);
 
   return (
     

@@ -20,9 +20,9 @@ export default function Hero () {
                 animateBy="words"
                 direction="top"
                 onAnimationComplete={handleAnimationComplete}
-                className="text-2xl mb-8"
+                className="text-2xl"
               />
-              <p className="text-[22px] text-wrap xl:mr-30 mb-5">Welcome to my portfolio! Here, you can explore the <span className="font-bold">projects</span> I've been working on.<br/> I strive to build impactful, functional, and beautifully designed websites and applications.</p>
+              <p className="text-[22px] text-wrap xl:mr-30 mt-8 mb-5">Welcome to my portfolio! Here, you can explore the <span className="font-bold">projects</span> I've been working on.<br/> I strive to build impactful, functional, and beautifully designed websites and applications.</p>
             </div>
 
             <Link to="projects" duration={1200} smooth={true}
@@ -31,7 +31,7 @@ export default function Hero () {
               <span className="relative z-10 hover:dark:text-black">See my projects</span>
             </Link>
           </MotionWrapper>
-          <MotionWrapper direction="fromTop" delay={0.2} className="w-[80%] mt-16 mdPlus:mt-0">
+          <MotionWrapper direction="fromTop" delay={0.2} className="w-[80%]">
            <Tabs />
           </MotionWrapper>
         </div>
