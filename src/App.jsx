@@ -24,7 +24,7 @@ export default function App() {
 
   return (
     
-    <div className="min-h-screen flex flex-col mx-auto">
+    <div className="min-h-screen flex flex-col mx-auto font-outfit">
       
       {/* Fixed navbar on top */}
       <div className="fixed top-0 left-0 w-full z-50  shadow-md py-2 bg-[var(--nav-bg)] text-[var(--nav-text)] h-[69px]">

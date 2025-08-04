@@ -1,6 +1,6 @@
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import { useRef, useState } from "react";
-
+import MotionWrapper from "../Components/Animation/MotionWrapper";
 export default function StylishCV() {
   const ref = useRef(null);
 
@@ -44,7 +44,7 @@ export default function StylishCV() {
   //min-h-[calc(100vh-69px)] using  this to avoid extra screen height... 69 is the height of navbar.
   return (
     <div className="min-h-[calc(100vh-69px)] flex items-center justify-center py-10 px-4 font-sans transition-all duration-500">
-      <div className="custom:w-[1200px] bg-white dark:bg-gray-800 rounded-3xl shadow-2xl dark:shadow-gray-900/50 flex flex-col lg:flex-row overflow-hidden relative backdrop-blur-sm border border-gray-200/20 dark:border-gray-700/30">
+      <div className="custom:w-[1200px] bg-white dark:bg-gray-800 rounded-3xl shadow-2xl dark:shadow-gray-900/50 flex flex-col md:flex-row overflow-hidden relative backdrop-blur-sm border border-gray-200/20 dark:border-gray-700/30">
         {/* Enhanced Decorative Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {/* Gradient Orbs */}
@@ -90,7 +90,7 @@ export default function StylishCV() {
         </div>
 
         {/* Left Side: Photo, Name, Contact, About */}
-        <div className="lg:w-2/5 flex flex-col items-center pt-12 pb-8 px-6 gap-6 relative z-10 bg-gradient-to-b from-transparent to-gray-50/50 dark:to-gray-800/50 border-r-2 border-dashed border-gray-400">
+        <MotionWrapper direction="fromLeft" className="lg:w-2/5 flex flex-col items-center pt-12 pb-8 px-6 gap-6 relative z-10 bg-gradient-to-b from-transparent to-gray-50/50 dark:to-gray-800/50 ">
           {/* Name and Title */}
           <div className="flex flex-col items-center text-center mb-4">
             <h1 className="text-3xl lg:text-4xl font-jetbrains font-black text-gray-900 dark:text-white tracking-tight bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-200 bg-clip-text">
@@ -164,9 +164,11 @@ export default function StylishCV() {
                 0170530XXX9
               </span>
             </div> */}
+            <a href="https://qhdaehdoxeugdzbjmzau.supabase.co/storage/v1/object/public/project-ss//CV.pdf" download="CV.pdf" target="_blank" rel="noopener noreferrer">
             <button className="w-fit relative px-5 py-2 my-2 bg-transparent text-[var(--color-text)] border-2 border-gray-500 border-dashed font-semibold rounded-lg shadow-md hover:bg-[#69070a80] hover:scale-105 active:scale-105 transition-transform duration-150">
               Download CV
             </button>
+            </a>
             {/* <div className="flex items-center gap-3 bg-white/80 dark:bg-gray-700/80 backdrop-blur-sm rounded-full px-5 py-2 shadow-lg border border-gray-200/50 dark:border-gray-600/50 hover:scale-105 transition-all duration-300">
               <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
               <span className="text-gray-700 dark:text-gray-200 text-sm font-medium">
@@ -188,7 +190,8 @@ export default function StylishCV() {
              I'm driven by curiosity and a passion for learning, constantly exploring new technologies and improving my craft as a full-stack developer.
             </p>
           </div>
-        </div>
+        </MotionWrapper>
+        <div className="md:border-r-2 border-dashed border-gray-400"></div>
 
 
         
@@ -196,7 +199,7 @@ export default function StylishCV() {
         {/* Right Side: Main Content */}
         <div className="lg:w-3/5 flex flex-col gap-8 p-8 lg:p-10 bg-gradient-to-br from-transparent to-gray-50/30 dark:to-gray-800/30">
           {/* What I Do Section */}
-          <div className="bg-gradient-to-r from-[#a8d5e557] to-[#c0b4e498] rounded-2xl p-6 shadow-lg relative">
+          <MotionWrapper direction="fromRight" delay={0.2} className="bg-gradient-to-r from-[#a8d5e557] to-[#c0b4e498] rounded-2xl p-6 shadow-lg relative">
             <h2 className="text-xl font-poppins font-bold text-[#232226] mb-4 tracking-wider flex items-center gap-2">
               WHAT I DO
             </h2>
@@ -221,10 +224,10 @@ export default function StylishCV() {
                 strokeWidth="2"
               />
             </svg>
-          </div>
+          </MotionWrapper>
 
           {/* Goals Section */}
-          <div className="bg-gradient-to-l from-[#a8d5e557] to-[#c0b4e498] rounded-2xl p-6 shadow-lg relative">
+          <MotionWrapper direction="fromRight" delay={0.3} className="bg-gradient-to-l from-[#a8d5e557] to-[#c0b4e498] rounded-2xl p-6 shadow-lg relative">
             <h2 className="text-xl font-poppins font-bold text-[#232226] mb-4 tracking-wider flex items-center gap-2">
               GOALS
             </h2>
@@ -246,12 +249,12 @@ export default function StylishCV() {
                 strokeWidth="1.5"
               />
             </svg>
-          </div>
+          </MotionWrapper>
 
           {/* Education and Skills */}
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Education */}
-            <div className="flex-1 bg-gradient-to-br from-[#a8d5e557] to-[#bbabe998] dark:from-gray-700 dark:to-gray-700 rounded-3xl p-6 shadow-xl border border-purple-100/50 dark:border-gray-600/50 relative overflow-hidden">
+            <MotionWrapper direction="fromRight" delay={0.4} className="flex-1 bg-gradient-to-br from-[#a8d5e557] to-[#bbabe998] dark:from-gray-700 dark:to-gray-700 rounded-3xl p-6 shadow-xl border border-purple-100/50 dark:border-gray-600/50 relative overflow-hidden">
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-purple-400/10 to-pink-400/10 dark:from-purple-500/5 dark:to-pink-500/5 rounded-full blur-2xl"></div>
 
               <h2 className="text-xl font-bold text-gray-900 dark:text-[#d1d5dc] mb-4 tracking-wider flex items-center gap-2">
@@ -269,10 +272,10 @@ export default function StylishCV() {
                   2024 - 2027
                 </div>
               </div>
-            </div>
+            </MotionWrapper>
 
             {/* Skills */}
-            <div className="flex-1 bg-gradient-to-br from-[#a8d5e557] to-[#c0b4e498] dark:from-gray-700 dark:to-gray-700 rounded-3xl p-6 shadow-xl border border-gray-400/50 dark:border-gray-500/50 relative overflow-hidden">
+            <MotionWrapper direction="fromRight" delay={0.5} className="flex-1 bg-gradient-to-br from-[#a8d5e557] to-[#c0b4e498] dark:from-gray-700 dark:to-gray-700 rounded-3xl p-6 shadow-xl border border-gray-400/50 dark:border-gray-500/50 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-blue-500/20 to-purple-500/20 dark:from-blue-400/10 dark:to-purple-400/10 rounded-full blur-2xl"></div>
 
               <h2 className="text-xl font-bold text-black dark:text-[#d1d5dc] mb-6 tracking-wider flex items-center gap-2">
@@ -294,7 +297,7 @@ export default function StylishCV() {
                   </div>
                 ))}
               </div>
-            </div>
+            </MotionWrapper>
           </div>
         </div>
       </div>

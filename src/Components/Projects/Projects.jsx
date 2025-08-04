@@ -1,18 +1,27 @@
-// import { projectsData } from "./data";
+// import { projectsData } from "./data"; //fetching from supabase instead of hardcoding
 import Card from "../Card";
 import { motion, useScroll } from "framer-motion"
 import { useState, useEffect, useRef } from "react";
 import { supabase } from "../../lib/supabaseClient";
+import MotionWrapper from "../Animation/MotionWrapper";
+import LoadingSpinner from "../LoadingSpinner";
 
 export default function Project({ limit }) {
- const container = useRef(null);
- const { scrollYProgress } = useScroll({
-  target: container,
-  offset: ['start start', 'end end']
- })
+  
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ['start start', 'end end'],
+    layoutEffect: false,
+  })
   const [projectsData, setProjectsData] = useState([]);
-  useEffect(() => {
+  const [loading, setLoading] = useState(true);
+  
+  useEffect(() =>  {
+    setLoading(true); // Start loading
+    
     const fetchProjects = async () => {
+      // await new Promise((resolve) => setTimeout(resolve, 5000)); // 5-second fake delay to test loading state
       const { data, error } = await supabase
         .from("projects")
         .select("*")
@@ -21,6 +30,7 @@ export default function Project({ limit }) {
       if (error) console.log("Fetch error:", error);
       else setProjectsData(data);
       // console.log(data);
+      setLoading(false); // End loading
     };
     fetchProjects();
   }, []);
@@ -28,9 +38,18 @@ export default function Project({ limit }) {
   // Determine how much data to map over based on the 'limit' prop
   const dataToMap = limit ? projectsData.slice(0, limit) : projectsData;
 
+  if (loading) {
+    return (
+        <LoadingSpinner/>
+    );
+  }
+  
+  // Otherwise render the cards
   return (
-    <div id="projects" className="bg-[#bca9bc2a] custom:w-full">
-      <p className="text-[32px] font-bold text-center pt-20 sm:mb-0 mb-30">Few of the projects I have worked on -</p>
+    <div id="projects" className="bg-[#bca9bc2a] custom:w-full min-h-screen">
+      <MotionWrapper direction="zoomInFromBottom" delay={0.3} >
+        <p className="text-[26px] sm:text-[32px] font-bold text-center pt-20 px-5 sm:mb-0 mb-30">What I've Built</p>
+      </MotionWrapper>
     <div className="flex flex-col justify-between items-center custom:w-[1200px] mx-auto">
       
       <div ref={container} className=" ">

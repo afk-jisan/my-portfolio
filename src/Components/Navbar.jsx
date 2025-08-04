@@ -13,6 +13,7 @@ export default function Navbar() {
   return (
     <nav className="flex flex-row items-center justify-around xl:w-[1280px] px-2 smc:px-8 xl:px-0 mx-auto ">
       {/* Light mode image */}
+      <NavLink to="/">
       <div className="h-[40px] w-[40px] xl:ml-20 cursor-pointer block dark:hidden">
         <motion.img
         src="./batman-emotions-hero-superhero-svgrepo-com.svg"
@@ -22,7 +23,7 @@ export default function Navbar() {
         transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
         whileHover={{rotate: [0, -5, 5, -5, 0]}}
       />
-      </div>
+      </div></NavLink>
       {/* Dark mode image */}
       <motion.img
       src="/batman-svgrepo-com.svg"

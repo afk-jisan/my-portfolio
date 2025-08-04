@@ -1,13 +1,13 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useMemo  } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function App() {
-  const tabs = [
-    { id: 'world', label: 'Frontend', content: 'React, TailwindCSS, Framer-motion, NextJS, TypeScript', gradient: 'from-blue-400/30 to-blue-600/30' },
+  const tabs = useMemo(() => [
+    { id: 'world', label: 'Frontend', content: 'React, TailwindCSS, Framer-motion, Redux-Toolkit, NextJS, TypeScript', gradient: 'from-blue-400/30 to-blue-600/30' },
     { id: 'us', label: 'Backend', content: 'Go, FastAPI, PostgreSQL, Supabase', gradient: 'from-red-400/30 to-red-600/30' },
     { id: 'technology', label: 'AI', content: 'Early learning stage', gradient: 'from-green-400/30 to-green-600/30' },
     { id: 'culture', label: 'Other skills', content: 'Git, Python, javascript', gradient: 'from-indigo-400/30 to-indigo-600/30' },
-  ];
+  ], []);
 
   const [activeTab, setActiveTab] = useState(tabs[0].id);
   const [prevActiveTab, setPrevActiveTab] = useState(tabs[0].id);
@@ -55,7 +55,7 @@ export default function App() {
 
   return (
     <div className="h-fit w-[85vw] xsm:w-full bg-[#69070aab] flex items-center justify-center rounded-2xl ">
-      <div className="w-full max-w-4xl bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl p-6 md:p-8">
+      <div className="w-full max-w-4xl  border border-white/20 rounded-2xl shadow-2xl p-6 md:p-8">
         <h1 className="text-4xl md:text-4xl mb-2 font-bold font-jetbrains text-center bg-gradient-to-r from-[#ACBB78] to-[#F7F8F8] bg-clip-text text-transparent">
           Skills
         </h1>
@@ -65,7 +65,7 @@ export default function App() {
             <motion.button
               key={tab.id}
               onClick={() => handleTabClick(tab.id)}
-              className={`relative px-4 py-2 text-sm font-medium rounded-md transition duration-300 whitespace-nowrap z-10 focus:outline-none ${
+              className={`relative px-4 py-2 text-sm font-medium rounded-md transition duration-300 whitespace-nowrap z-10 focus:outline-none cursor-pointer ${
                 activeTab === tab.id
                   ? 'text-white'
                   : 'text-gray-300 hover:text-white'
@@ -92,7 +92,7 @@ export default function App() {
               animate={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
               exit={{ opacity: 0, x: direction * -100, filter: 'blur(10px)' }}
               transition={{ duration: contentTransitionDuration, ease: 'easeOut' }}
-              className="absolute text-center text-lg md:text-xl text-gray-200 max-w-2xl"
+              className="absolute text-center text-lg md:text-xl text-gray-200 max-w-2xl px-5"
             >
               {selectedTab.content}
             </motion.div>
