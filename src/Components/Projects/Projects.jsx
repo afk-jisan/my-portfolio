@@ -1,19 +1,12 @@
 // import { projectsData } from "./data"; //fetching from supabase instead of hardcoding
 import Card from "../Card";
-import { motion, useScroll } from "framer-motion"
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { supabase } from "../../lib/supabaseClient";
 import MotionWrapper from "../Animation/MotionWrapper";
 import LoadingSpinner from "../LoadingSpinner";
-
+import ScrollContainer from "../Projects/ProjectScrollContainer";
 export default function Project({ limit }) {
   
-  const container = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ['start start', 'end end'],
-    layoutEffect: false,
-  })
   const [projectsData, setProjectsData] = useState([]);
   const [loading, setLoading] = useState(true);
   
@@ -35,14 +28,11 @@ export default function Project({ limit }) {
     fetchProjects();
   }, []);
 
+  if (loading) return <LoadingSpinner />;
   // Determine how much data to map over based on the 'limit' prop
   const dataToMap = limit ? projectsData.slice(0, limit) : projectsData;
 
-  if (loading) {
-    return (
-        <LoadingSpinner/>
-    );
-  }
+
   
   // Otherwise render the cards
   return (
@@ -52,14 +42,25 @@ export default function Project({ limit }) {
       </MotionWrapper>
     <div className="flex flex-col justify-between items-center custom:w-[1200px] mx-auto">
       
-      <div ref={container} className=" ">
-        {
-          dataToMap.map( (project, i) => {
-            const targetScale = 1 - ((projectsData.length - i) * 0.05);
-            return <Card key={i} i={i} {...project} progress={scrollYProgress} range={[i * 0.25, 1]} targetScale={targetScale}/>
-          })
-        }
-      </div>
+        <ScrollContainer>
+          {(scrollYProgress) => (
+            <div>
+              {dataToMap.map((project, i) => {
+                const targetScale = 1 - ((projectsData.length - i) * 0.05);
+                return (
+                  <Card
+                    key={i}
+                    i={i}
+                    {...project}
+                    progress={scrollYProgress}
+                    range={[i * 0.25, 1]}
+                    targetScale={targetScale}
+                  />
+                );
+              })}
+            </div>
+          )}
+        </ScrollContainer>
     </div>
     </div>
   );

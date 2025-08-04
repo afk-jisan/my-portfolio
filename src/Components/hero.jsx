@@ -31,7 +31,7 @@ export default function Hero () {
               <span className="relative z-10 hover:dark:text-black">See my projects</span>
             </Link>
           </MotionWrapper>
-          <MotionWrapper direction="fromRight" delay={0.2} className="w-[80%]">
+          <MotionWrapper direction="fromTop" delay={0.2} className="w-[80%] mt-16 mdPlus:mt-0">
            <Tabs />
           </MotionWrapper>
         </div>

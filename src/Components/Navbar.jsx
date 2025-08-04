@@ -11,13 +11,13 @@ export default function Navbar() {
   
 
   return (
-    <nav className="flex flex-row items-center justify-around xl:w-[1280px] px-2 smc:px-8 xl:px-0 mx-auto ">
+    <nav className="flex flex-row items-center justify-around xl:w-[1280px] px-2 smc:px-8 xl:px-0 mx-auto  ">
       {/* Light mode image */}
       <NavLink to="/">
       <div className="h-[40px] w-[40px] xl:ml-20 cursor-pointer block dark:hidden">
         <motion.img
         src="./batman-emotions-hero-superhero-svgrepo-com.svg"
-        className="dark:invert"
+        className="dark:invert relative"
         alt="Batman"
         animate={{ y: [0, -10, 0] }}
         transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
