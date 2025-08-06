@@ -115,7 +115,7 @@ npm run dev
 If you like this project or want to get in touch:
 
 * 📧 [baktier.galib.jisan@gmail.com](mailto:baktier.galib.jisan@gmail.com)
-* 🌐 [yourwebsite.com]()
+* 🌐 [https://afk-jisan.pages.dev/](https://afk-jisan.pages.dev/)
 
 ---
 
