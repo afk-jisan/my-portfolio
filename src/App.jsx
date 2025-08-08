@@ -38,7 +38,7 @@ export default function App() {
       </div>
 
       {/* Page content */}
-      <main className="mt-[69px] bg-[var(--color-bg)] text-[var(--color-text)] flex-1 min-h-[calc(100vh-69px)]">
+      <main className="mt-[69px] bg-[var(--color-bg)] text-[var(--color-text)] flex-1 min-h-[calc(100vh-69px)] w-screen">
         <Outlet />
       </main>
     </div>

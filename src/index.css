@@ -81,3 +81,9 @@
     animation: fade-in-out 1.5s ease-in-out;
   }
 }
+
+
+.motion-smooth {
+  will-change: transform, opacity;
+  transform: translateZ(0); 
+}
