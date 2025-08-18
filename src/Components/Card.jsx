@@ -29,8 +29,26 @@ export default function Card( { title, description, src, tech, src_link, live_li
                         <p className="text-[16px] sm:text-[18px]">{description}</p>
                         <p className="text-[16px] mt-2">Tech used: {tech}</p>
                         <div className="flex flex-row gap-2 pt-5">
-                            <a href={src_link} target="_blank" rel="noopener noreferrer" className="border-3 border-dashed border-gray-300 rounded-[14px] cursor-pointer py-2 px-4 hover:bg-[#8a0a0f] transition text-[16px] sm:text-[18px]">Source</a>
-                            <a href={live_link} target="_blank" rel="noopener noreferrer" className="border-3 border-dashed border-gray-300 rounded-[14px] cursor-pointer py-2 px-4 hover:bg-[#8a0a0f] transition text-[16px] sm:text-[18px]">Live</a>
+                            {src_link && (
+                                <a 
+                                    href={src_link} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="border-3 border-dashed border-gray-300 rounded-[14px] cursor-pointer py-2 px-4 hover:bg-[#8a0a0f] transition text-[16px] sm:text-[18px]"
+                                >
+                                    Source
+                                </a>
+                            )}
+                            {live_link && (
+                                <a 
+                                    href={live_link} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="border-3 border-dashed border-gray-300 rounded-[14px] cursor-pointer py-2 px-4 hover:bg-[#8a0a0f] transition text-[16px] sm:text-[18px]"
+                                >
+                                    Live
+                                </a>
+                            )}
                         </div>
                         
                     </div>

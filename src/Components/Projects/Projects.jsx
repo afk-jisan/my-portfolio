@@ -36,7 +36,7 @@ export default function Project({ limit }) {
   
   // Otherwise render the cards
   return (
-    <div id="projects" className="bg-[#bca9bc2a] custom:w-full min-h-screen">
+    <div id="projects" className="bg-[#bca9bc2a] custom:w-full min-h-screen px-2">
       <MotionWrapper direction="zoomInFromBottom" delay={0.3} >
         <p className="text-[26px] sm:text-[32px] font-bold text-center pt-20 px-5 sm:mb-0 mb-30">What I've Built</p>
       </MotionWrapper>

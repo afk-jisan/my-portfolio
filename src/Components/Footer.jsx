@@ -2,7 +2,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear(); // Dynamically get the current year
 
   return (
-    <footer id="contact" className="bg-[var(--footer-bg)]  py-15 text-center">
+    <footer className="bg-[var(--footer-bg)] py-15 text-center">
         
       <div className="container mx-auto px-4 ">
         {/* Company Name */}

@@ -43,7 +43,7 @@ export default function StylishCV() {
 
   //min-h-[calc(100vh-69px)] using  this to avoid extra screen height... 69 is the height of navbar.
   return (
-    <div className="min-h-[calc(100vh-69px)] flex items-center justify-center py-10 px-4 font-sans transition-all duration-500">
+    <div className="min-h-[calc(100vh-69px)] font-outfit flex items-center justify-center py-10 px-4 font-sans transition-all duration-500">
       <div className="custom:w-[1200px] bg-white dark:bg-gray-800 rounded-3xl shadow-2xl dark:shadow-gray-900/50 flex flex-col md:flex-row overflow-hidden relative backdrop-blur-sm border border-gray-200/20 dark:border-gray-700/30">
         {/* Enhanced Decorative Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -165,7 +165,7 @@ export default function StylishCV() {
               </span>
             </div> */}
             <a href="https://qhdaehdoxeugdzbjmzau.supabase.co/storage/v1/object/public/project-ss//CV.pdf" download="CV.pdf" target="_blank" rel="noopener noreferrer">
-            <button className="w-fit relative px-5 py-2 my-2 bg-transparent text-[var(--color-text)] border-2 border-gray-500 border-dashed font-semibold rounded-lg shadow-md hover:bg-[#69070a80] hover:scale-105 active:scale-105 transition-transform duration-150">
+            <button className="w-fit cursor-pointer relative px-5 py-2 my-2 bg-transparent text-[var(--color-text)] border-2 border-gray-500 border-dashed font-semibold rounded-lg shadow-md hover:bg-[#69070a80] hover:scale-105 active:scale-105 transition-transform duration-150">
               Download CV
             </button>
             </a>
@@ -182,7 +182,7 @@ export default function StylishCV() {
             <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-400/20 to-purple-400/20 dark:from-blue-500/10 dark:to-purple-500/10 rounded-full blur-2xl"></div>
 
             <h2 className="text-xl font-bold text-gray-900 dark:text-[#d1d5dc]  mb-3 tracking-wider flex items-center gap-2">
-              <span className="w-2 h-2 font-poppins bg-blue-500 rounded-full"></span>
+              {/* <span className="w-2 h-2 font-poppins bg-blue-500 rounded-full"></span> */}
               ABOUT ME
             </h2>
             <p className="text-gray-700 dark:text-[#d1d5dc] text-sm leading-relaxed relative z-10">
@@ -258,7 +258,7 @@ export default function StylishCV() {
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-purple-400/10 to-pink-400/10 dark:from-purple-500/5 dark:to-pink-500/5 rounded-full blur-2xl"></div>
 
               <h2 className="text-xl font-bold text-gray-900 dark:text-[#d1d5dc] mb-4 tracking-wider flex items-center gap-2">
-                <span className="w-2 h-2 font-poppins bg-purple-500 rounded-full"></span>
+                {/* <span className="w-2 h-2 font-poppins bg-purple-500 rounded-full"></span> */}
                 EDUCATION
               </h2>
               <div className="relative z-10">
@@ -279,7 +279,7 @@ export default function StylishCV() {
               <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-blue-500/20 to-purple-500/20 dark:from-blue-400/10 dark:to-purple-400/10 rounded-full blur-2xl"></div>
 
               <h2 className="text-xl font-bold text-black dark:text-[#d1d5dc] mb-6 tracking-wider flex items-center gap-2">
-                <span className="w-2 h-2 font-poppins bg-blue-300  rounded-full"></span>
+                {/* <span className="w-2 h-2 font-poppins bg-blue-300  rounded-full"></span> */}
                 SKILLS
               </h2>
               <div className="grid grid-cols-1 gap-3 relative z-10">

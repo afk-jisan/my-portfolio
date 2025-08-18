@@ -4,7 +4,7 @@ import CopyEmailButton from "../Components/CopyEmail";
 import MotionWrapper from "../Components/Animation/MotionWrapper";
 export default function Contact() {
     return (
-      <div className="min-h-[calc(100vh-69px)] flex items-center">
+      <div id="contact" className="min-h-[calc(100vh)] flex items-center">
         <div className="xl:w-[1280px] flex flex-col mdPlus:flex-row mx-auto border-4 border-double border-gray-500  overflow-hidden">
 
           <MotionWrapper direction="fromLeft" className="p-10 flex flex-col justify-center items-center gap-5 flex-1 py-25 mdPlus:py-0">
